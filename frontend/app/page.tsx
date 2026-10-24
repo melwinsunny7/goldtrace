@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-[#0F172A]">
@@ -27,9 +29,9 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="/login" className="text-sm">
+            <Link href="/login" className="text-sm">
               Log in
-            </a>
+            </Link>
 
             <button className="rounded-full bg-[#D4AF37] px-5 py-2 text-sm font-medium">
               Sign up
@@ -48,26 +50,28 @@ export default function Home() {
             Every purchase,
             <br />
             priced right and{" "}
-            <span className="text-[#C9973A]">
-              audit-ready
-            </span>
-            .
+            <span className="text-[#C9973A]">audit-ready</span>.
           </h1>
 
           <p className="mt-6 text-lg text-[#334155]">
-            Appraiser-backed pricing, pledge management and
-            audit-ready reporting designed specifically for
-            modern gold buying businesses.
+            Appraiser-backed pricing, pledge management and audit-ready
+            reporting designed specifically for modern gold buying businesses.
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <button className="rounded-full bg-[#D4AF37] px-6 py-3 font-medium">
+            <Link
+              href="/purchase"
+              className="rounded-full bg-[#D4AF37] px-6 py-3 font-medium"
+            >
               Get started
-            </button>
+            </Link>
 
-            <button className="rounded-full border border-[#0F172A] px-6 py-3">
+            <Link
+              href="/login"
+              className="rounded-full border border-[#0F172A] px-6 py-3"
+            >
               Log in
-            </button>
+            </Link>
           </div>
         </div>
       </section>
